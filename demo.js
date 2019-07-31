@@ -1,10 +1,10 @@
-function callEmployeeAPI() {
+function callEmployeeAPI(employeeCount) {
 	token = $("#token").val();
 	console.log("Token: " + token);
 	marker = $("#marker").val();
 	url = $("#url").val();
 	if (marker != "") {console.log("Marker: " + marker);} else {console.log("No marker");}
-//00D1t000000DVG4!AQUAQJPJONwk.uCcLYng7zhQ4lldDyG3jERRKrjY0qRCSYWsqb4ygRislUNUeMX4_E_JYebUihpYqxUU1mHVpLHv88Z5_9zo
+//00D1t000000DVG4!AQUAQPD8iOC6pd1IgOqSNyej7z58iH91ljCecPuMSTZ1zbdmDnmuJQmJAn1y8t5VjAWzqE54iIK.lyrkqDiJN83g9Ev6.sd6
 $.ajaxSetup({
   contentType: "application/json; charset=utf-8",
   dataType: 'json',
@@ -17,17 +17,20 @@ $.ajaxSetup({
 });	
 	if (marker != "") callingUrl = url + "?marker=" + marker; else callingUrl = url;
 	$.getJSON( callingUrl, function( data ) {
-		console.log('Got data: ' + data);
+		if (data) {
 		retCount = data.data.length;
+		$("#employeeCount").html(employeeCount + retCount + ' new employees loaded.');
 		console.log('Data size: ' + retCount);
 		$.each(data.data, function(key, val) {
-			marker = val.pageMarker;
 			//Sticking this in this loop as I have no idea how to get data back out
-			$("#marker").val(marker);
+			$("#marker").val(val.pageMarker);
 			jsonStringValue = JSON.stringify(JSON.stringify(val));
-			$("ol").append("<li onClick=\'showEmployeeData(" + jsonStringValue +")\'>" + val.fullName + "</li>");
+			$("ul").append("<a href='#' class='list-group-item' onClick=\'showEmployeeData(" + jsonStringValue +")\'>" + val.fullName + "</a>");
 			console.log(val.fullName);
 		});
+		}
+	if ($("#fetchAll").is(":checked") && marker != $("#marker").val()) callEmployeeAPI(employeeCount + retCount);
+		
 	});
 
 }
@@ -35,7 +38,7 @@ $.ajaxSetup({
 function showEmployeeData(textdata) {
 	//$('#employeeData').html('<h3>Employee data:</h3><pre><code>' + data + '</code></pre>');
 	data = JSON.parse(textdata);
-	$('#employeeData').html('<h3>Employee data:</h3><h4>Name</h4><p>' + data.fullName + '<h4>Employment info</h4><hr><div id="employmentInfo"></div><hr><h4>Address info</h4><div id="addressInfo"></div><hr><h4>Additional fields</h4><div id="additionalFields"></div>');
+	$('#employeeData').html('<div class="card"><h4 class="card-header">Employee data</h4><div class="card-body"><h5 class="card-title">Contact</h5><p class="card-text">' + data.fullName + '</p><p class="card-text">' + data.hrDepartment + '</p><hr><h5 class="card-title">Employment info</h5><p class="card-text" id="employmentInfo"></p><hr><h5 class="card-title">Address info</h5><p class="card-text" id="addressInfo"></p><hr><h5 class="card-title">Additional fields</h5><p class="card-text" id="additionalFields"></p></div></div>');
 		
 	generateEmploymentTable(data.employments[0]);
 	generateAddressDetail(data.addresses);
