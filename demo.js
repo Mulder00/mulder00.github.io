@@ -38,7 +38,7 @@ $.ajaxSetup({
 function showEmployeeData(textdata) {
 	//$('#employeeData').html('<h3>Employee data:</h3><pre><code>' + data + '</code></pre>');
 	data = JSON.parse(textdata);
-	$('#employeeData').html('<div class="card"><h4 class="card-header">Employee data</h4><div class="card-body"><h5 class="card-title">Contact</h5><p class="card-text">' + data.fullName + '</p><p class="card-text">' + data.hrDepartment + '</p><hr><h5 class="card-title">Employment info</h5><p class="card-text" id="employmentInfo"></p><hr><h5 class="card-title">Address info</h5><p class="card-text" id="addressInfo"></p><hr><h5 class="card-title">Additional fields</h5><p class="card-text" id="additionalFields"></p></div></div>');
+	$('#employeeData').html('<div class="card"><h4 class="card-header">Employee data</h4><div class="card-body"><h5 class="card-title">Contact</h5><p class="card-text">' + data.fullName + '</p><p class="card-text">' + data.hrDepartment + '</p><hr><h5 class="card-title">Employment info</h5><p class="card-text" id="employmentInfo"></p><hr><h5 class="card-title">Address info</h5><p class="card-text" id="addressInfo"></p><hr><div id="addFields"></div></div></div>');
 		
 	generateEmploymentTable(data.employments[0]);
 	generateAddressDetail(data.addresses);
@@ -57,8 +57,11 @@ function generateAddressDetail(data) {
 
 function generateAdditionalFieldsList(data) {
 	if (data.length > 0)
+	{
+		$("#addFields").append('<h5 class="card-title">Additional fields</h5><p class="card-text" id="additionalFields"></p>');
 	for (var i=0; i<data.length; i++) {
 		$("#additionalFields").append("<p>" + data[i].name + ": " + data[i].value + "</p>");
+	}
 	}
 }
 
