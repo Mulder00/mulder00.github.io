@@ -56,6 +56,7 @@ function generateAddressDetail(data) {
 }
 
 function generateAdditionalFieldsList(data) {
+	if (data.length > 0)
 	for (var i=0; i<data.length; i++) {
 		$("#additionalFields").append("<p>" + data[i].name + ": " + data[i].value + "</p>");
 	}
