@@ -1,3 +1,7 @@
 #wearecic {
     margin: 20px;
 }
+
+.dynamic-box-content {
+    display: none;
+}
