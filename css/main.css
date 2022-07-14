@@ -5,3 +5,17 @@
 .dynamic-box-content {
     display: none;
 }
+
+.offerings-box {
+    max-height: 500px;
+    margin-bottom: 20px;
+
+}
+
+.offerings-header {
+    min-height: 200px;
+}
+
+.ci-section-heading {
+    margin-bottom: 40px;
+}
