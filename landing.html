@@ -85,9 +85,13 @@
                             at Sage.
                         </div>
                         <div class="btns-wrapper">
+                            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal"
+                                data-target="#contactUsModal">
+                                Contact us
+                            </button>
                             <a
-                                href="https://sage365.sharepoint.com/:p:/r/sites/ContinuousInnovation/Shared%20Documents/Consultancy/Consultancy%20services/Continous_Innovation_Consultancy_Document_2022_MS01.pptx?d=wdedb9ce06fa64f6e9e67dd7c652d7ab5&csf=1&web=1&e=FBkSw1">
-                                <button class="btn btn-default" type="button">Tell me more</button></a>
+                                href="https://sage365.sharepoint.com/:p:/r/sites/ContinuousInnovation/Shared%20Documents/Consultancy/Consultancy%20services/Continous_Innovation_Consultancy_Document_2022_MS01.pptx?d=wdedb9ce06fa64f6e9e67dd7c652d7ab5&csf=1&web=1&e=FBkSw1"><button
+                                    class="btn btn-link" type="button">Tell me more</button></a>
                         </div>
                     </div>
                 </div>
@@ -252,6 +256,42 @@
             </div>
         </div>
 
+
+        <div class="modal fade" id="contactUsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <form>
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
+                            <h3 class="modal-title" id="myModalLabel">Contact us</h3>
+                            <div class="subtitle">This is just a draft - fields still to be defined</div>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="inputName">Your name</label>
+                                <input type="text" class="form-control" id="inputName" placeholder="e.g. Pieter Mulder">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail">Email address</label>
+                                <input type="email" class="form-control" id="inputEmail"
+                                    placeholder="e.g. pieter.mulder@sage.com">
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox">Do you have a squad of at least 3 people who will be
+                                    committed to this?
+                                </label>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-default">Send</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
 
 </body>
 
