@@ -24,3 +24,36 @@
     background-color: #F2F5F6;
 
 }
+
+.contactusform {
+    padding: 24px;
+
+}
+
+.testimonial-photo {
+    width: 120px;
+    border-radius: 60px;
+}
+
+.contact-us-iframe {
+    border: none;
+    max-width: 100%;
+    max-height: 100vh;
+    width: 640px;
+    height: 620px;
+    border-radius: 24px;
+}
+
+.team-member-container {
+    width: 200px !important;
+    padding: 0;
+}
+
+.colleague-card {
+    height: 380px !important;
+    width: 320px;
+}
+
+.colleague-item {
+    margin: -24px;
+}
