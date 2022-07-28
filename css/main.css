@@ -31,6 +31,12 @@
     }
 }
 
+@media (max-width: 1199px) {
+    .d4 {
+        font-size: 36px !important;
+    }
+}
+
 
 .offerings-header {
     min-height: 200px;
