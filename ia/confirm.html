@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Sage Innovation Academy</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" type="image/png" sizes="32x32" href="https://www.sage.com/Areas/SageDotCom/img/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="https://www.sage.com/Areas/SageDotCom/img/favicon/favicon-16x16.png">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link href="https://fonts.sage.com/sage.css" rel="stylesheet" />
+		<link href="https://ux-repo.sage.com/stylesheets/sage-dls-custom.css" rel="stylesheet" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-KDR1XZP3GS"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-KDR1XZP3GS');
+		</script>
+
+	</head>
+	<body>
+		<header class="global-header docs-header">
+			<nav class="navbar navbar-default">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<a class="navbar-brand" href="#">
+							<img alt="Brand" src="img/Sage_Logo_Brilliant_Green_RGB.png" width="60" alt="Sage logo">
+						</a>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<main class="docs-main">
+			<div class="sbox">
+			    <div class="layout_1-col--fixed padding-y--xxl">
+			        <header class="section-header text-center">
+			            <h2>Olá! 🤩</h2>
+			            <p>Carregue no botão 👇 para confirmar que já terminou o pre-work e receber o link para a reunião.</p>
+			            <br>
+			            <p id="confirm">
+			            	<button class="btn btn-default" type="submit" onclick="callIt()">Terminei o Pre-work</button>
+							
+						</p>
+	        		</header>
+	    		</div>
+			</div>
+		</main>
+		<script>
+			const urlParams = new URLSearchParams(location.search);
+			if(urlParams.has('firstName')) {
+	            // Retrieve the Query Strings
+	            const firstName = urlParams.get('firstName');
+	            //document.getElementById("name").innerHTML = firstName;
+	        }
+	        else {
+	        	location.href = "https://continuousinnovation.info/ia/index.html";
+	        }
+
+			function callIt() {
+	            if(urlParams.has('firstName') && urlParams.has('guid')) {
+	                // Retrieve the Query Strings
+	                const firstName = urlParams.get('firstName');
+	                const guid = urlParams.get('guid');
+	                // Create the Request
+	                const httpRequest = "https://prod-35.westus.logic.azure.com/workflows/2778d2dc0bb64a32acb0f69b1c6342e5/triggers/manual/paths/invoke/guid/" +
+	                    guid +
+	                    "/firstName/" +
+	                    firstName +
+	                    "?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=reeQ4OwnefARbxl5LDXWCGEEV3I89M4eTOiWTr2srBY"
+	                console.log(httpRequest);
+
+	                // Send it
+	                let xhr = new XMLHttpRequest();
+	                xhr.open("GET", httpRequest);
+	                xhr.send();
+	                document.getElementById("confirm").innerHTML =
+	                	"<b>Confirmado</b>! 💪<br>Vá ver o seu email!<br><br>Pode fechar esta janela.";
+	            }
+	            else {
+	            	location.href = "https://continuousinnovation.info/ia/index.html"
+	            }
+            }
+        </script>
+	</body>
+</html>

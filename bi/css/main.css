@@ -1,0 +1,101 @@
+#wearecic {
+    margin: 20px;
+}
+
+.dynamic-box-content {
+    display: none;
+}
+
+
+@media (min-width: 992px) {
+    .steps-box {
+        height: 600px !important;
+    }
+}
+
+@media (min-width: 1100px) {
+    .steps-box {
+        height: 580px !important;
+    }
+}
+
+@media (min-width: 1550px) {
+    .steps-box {
+        height: 500px !important;
+    }
+}
+
+@media (max-width: 1199px) {
+    .d4 {
+        font-size: 36px !important;
+    }
+}
+
+
+.steps-header {
+    background-color: #00d639;
+    border-radius: 267px;
+    width: 267px;
+    height: 267px;
+    padding: 94px 24px 0 !important;
+}
+
+.ci-section-heading {
+    margin-bottom: 40px;
+}
+
+.bg-alternate {
+    background-color: #F2F5F6;
+
+}
+
+.contactusform {
+    padding: 24px;
+
+}
+
+.testimonial-photo {
+    width: 120px;
+    border-radius: 60px;
+}
+
+.contact-us-iframe {
+    border: none;
+    max-width: 100%;
+    max-height: 100vh;
+    width: 640px;
+    height: 620px;
+    border-radius: 24px;
+}
+
+.team-member-container {
+    width: 200px !important;
+    padding: 0;
+}
+
+.colleague-card {
+    height: 380px !important;
+    width: 320px;
+}
+
+.step-item {
+    margin: -24px;
+}
+
+.step-card {
+    background: #00d639;
+    border-radius: 120px;
+    margin: 24px;
+}
+
+.mission-keyword {
+    color: #00d639;
+}
+
+.time-estimate {
+    color: #ffffff;
+}
+
+.outcomes-heading {
+    padding-top: 12px !important;
+}

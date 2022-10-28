@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Sage Innovation Academy</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" type="image/png" sizes="32x32" href="https://www.sage.com/Areas/SageDotCom/img/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="https://www.sage.com/Areas/SageDotCom/img/favicon/favicon-16x16.png">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link href="https://fonts.sage.com/sage.css" rel="stylesheet" />
+		<link href="https://ux-repo.sage.com/stylesheets/sage-dls-custom.css" rel="stylesheet" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-KDR1XZP3GS"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-KDR1XZP3GS');
+		</script>
+		<style>
+			::-webkit-scrollbar {
+			width: 12px;
+			height: 12px;
+			}
+			::-webkit-scrollbar-track {
+			border: 1px solid black;
+			border-radius: 10px;
+			}
+			::-webkit-scrollbar-thumb {
+			background: gray;
+			border-radius: 10px;
+			}
+			::-webkit-scrollbar-thumb:hover {
+			background: black;
+			}
+		</style>
+		<script>
+			$(document).ready(function(){
+				$("#card1-in").hide();
+				$("#card2-in").hide();
+				$("#card3-in").hide();
+
+    			$("#card1-out").mouseenter(function(){
+       				$("#card1-out").hide();
+       				$("#card1-in").show();
+    			});
+
+    			$("#card1-in").mouseleave(function(){
+       				$("#card1-in").hide();
+       				$("#card1-out").show();
+    			});
+
+    			$("#card2-out").mouseenter(function(){
+       				$("#card2-out").hide();
+       				$("#card2-in").show();
+    			});
+
+    			$("#card2-in").mouseleave(function(){
+       				$("#card2-in").hide();
+       				$("#card2-out").show();
+    			});
+
+    			$("#card3-out").mouseenter(function(){
+       				$("#card3-out").hide();
+       				$("#card3-in").show();
+    			});
+
+    			$("#card3-in").mouseleave(function(){
+       				$("#card3-in").hide();
+       				$("#card3-out").show();
+    			});
+    			
+			});   
+
+
+			
+		</script>
+	</head>
+	<body>
+		<header class="global-header docs-header">
+			<nav class="navbar navbar-default">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<a class="navbar-brand" href="#">
+							<img alt="Brand" src="img/Sage_Logo_Brilliant_Green_RGB.png" width="60" alt="Sage logo">
+						</a>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<main class="docs-main">
+			<div class="sbox">
+				<div class="layout_1-col--fixed">
+					<header class="section-header">
+						<div style="font-size: 11pt; ">
+							BeInnovative! > Part 1 > Why?
+						</div>
+						<hr>
+						<div style="font-size: 11pt;">
+							<b>Topic 3 of 4</b> | <img src="img/i1.png" width="25px"> 5 min
+						</div>
+						<br><br>
+						<div style="text-align: center;">
+							<h2>Embracing failure as a way to secure psychological safety</h2><br>
+						</div>
+						<div style="text-align: center;">
+							<div style="position: relative; padding-bottom: 50.25%; height: 0;">
+									<iframe width="560" height="315" src="https://www.youtube.com/embed/8cRdC__AWaQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-4" >
+								<div style="text-align: center;" class="card card--shadow" id="card1-out">
+									<div class="card_header">
+										<p style="font-size: medium;">
+											<b>Best failed idea competition</b><br>
+											(TATA - India)
+										</p>
+									</div>
+									<div class="card_body">
+										<img src="img/t31.png" width="100%" style="padding-bottom: 53px">
+										<img src="img/qr1.png" width="60px">
+									</div>
+								</div>
+								<div class='card card--shadow' id='card1-in'>
+									<div class='card_header' style='font-size: small'>
+										The Tata Group is one of India’s most successful companies and its business units make cars & trucks, steel, tea, electricity, chemicals, consulting services, software, and just about everything else. Tata’s internal innovation awards program, InnoVista, showcases numerous brilliant successes each year, but in addition to the awards for the most successful innovations, the company also gave awards to failred “Dare to Try” projects, encouraging the spirit of innovation, by letting people know that risk is an integral part of the game, and failing is not only tolerated, but celebrated.
+										<br><br>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div style="text-align: center;" class="card card--shadow" id="card2-out">
+									<div class="card_header">
+										<p style="font-size: medium;">
+											<b>Fuc*up Nights</b><br>
+											(Mexico / Worldwide)
+										</p>
+									</div>
+									<div class="card_body">
+										<img src="img/t32.png" width="70%" style="padding-bottom: 10px">
+										<img src="img/qr2.png" width="60px">
+									</div>
+								</div>
+								<div class='card card--shadow' id='card2-in'>
+									<div class='card_header' style='font-size: small'>
+										The concept of the Fuc*up Night aims to communicate professional failures openly. Originating in Mexico in 2012, this event concept has spread all over the world and the idea was born when five friends started discussing about why everyone is talking about the success stories rather than talking about obvious failures and they designed the event to introduce a culture of failure as it's seen as a necessary experience that can often be the key to success.
+										<br><br>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div style="text-align: center;" class="card card--shadow" id="card3-out">
+									<div class="card_header">
+										<p style="font-size: medium;">
+											<b>Failure Parties</b><br>
+											(Intuit - USA)
+										</p>
+									</div>
+									<div class="card_body">
+										<img src="img/t33.png" width="100%" style="padding-bottom: 23px">
+										<img src="img/qr3.png" width="60px">
+									</div>
+								</div>
+								<div class='card card--shadow' id='card3-in'>
+									<div class='card_header' style='font-size: small'>
+										Accounting software company Intuit gives a special award for the Best Failure and holds 'failure parties'. Their cofounder Scott Cook explained it once by saying they celebrate failures, because every failure teaches something important that can be the seed for the next great idea. Taking positive lessons from failure and encouraging people to seize the initiative and take risks has to be an integral part of a company’s culture.
+										<br><br>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						
+						<br><br>
+						<b>1. What would working in a psychological safe working environment feel like to you?</b><br>
+						<i>(share your thoughts and you can then download your reflection points at the end of Part 1)</i>
+						<br><br>
+						<textarea class="form-control" rows="3"></textarea>
+						
+						<br><br>
+						<b>2. Share the last time you turned a failure into a learning opportunity?</b><br>
+						<i>(share your thoughts and you can then download your reflection points at the end of Part 1)</i>
+						<br><br>
+						<textarea class="form-control" rows="3"></textarea>
+						<br>
+						<div style="text-align: right;">
+							<br>
+							<a class="btn btn-default" href="bim4.html" role="button">Next</a>
+						</div>
+					</header>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>
