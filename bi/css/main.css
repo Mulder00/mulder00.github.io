@@ -32,6 +32,14 @@
 }
 
 
+.container-parts {
+    width: 95% !important;
+}
+
+.outcomes-card {
+    min-width: 270px;
+}
+
 .steps-header {
     background-color: #00d639;
     border-radius: 267px;
@@ -97,5 +105,5 @@
 }
 
 .outcomes-heading {
-    padding-top: 12px !important;
+    padding-top: 32px !important;
 }
